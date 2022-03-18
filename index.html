@@ -19,7 +19,6 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Varela+Round&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./assets/css/main.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -27,13 +26,15 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link rel="stylesheet" href="/assets/css/main.css" />
         <title>Trieu Vy Portfolio</title>
     </head>
 
     <body>
-        <section id="home">
+        <section id="home" class="flex">
             <h1>Hey I am <span class="highlight">Vo Trieu Vy</span></h1>
-            <h2>a full-stack web developer</h2>
+            <h2>a full-stack web developer.</h2>
+            <button id="scroll-button">Go to my infomation</button>
         </section>
         <nav id="navbar" class="nav">
             <ul class="nav-list">
@@ -52,204 +53,182 @@
             </ul>
         </nav>
         <section id="about">
-            <div class="container flex">
+            <div class="flex-column">
                 <h2 class="section-title">ABOUT</h2>
-                <div class="flex row label-wrap">
-                    <div class="flex row-gt-sm">
-                        <div class="flex bullet-wrap">
-                            <div
-                                class="hex-wrap waypoint animated flip-in-x"
-                                data-animation="flip-in-x"
-                            >
-                                <div class="hexagon">
-                                    <i class="mdi mdi-speedometer"></i>
-                                </div>
-                            </div>
-                            <div
-                                class="waypoint animated fade-in"
-                                data-animation="fade-in"
-                            >
-                                <div class="label bold">Fast</div>
-                                <p>
-                                    Fast load times and lag free interaction, my
-                                    highest priority.
-                                </p>
-                            </div>
+                <div class="title-dash"></div>
+                <div class="flex flex-wrap">
+                    <div class="flex-column flex-start special-info">
+                        <div class="hexagon">
+                            <span
+                                class="iconify"
+                                data-icon="mdi:speedometer"
+                            ></span>
+                        </div>
+                        <div class="label bold">Fast</div>
+                        <p>
+                            Fast load times and lag free interaction, my highest
+                            priority.
+                        </p>
+                    </div>
+                    <div class="flex-column flex-start special-info">
+                        <div class="hexagon">
+                            <span
+                                class="iconify"
+                                data-icon="mdi:cellphone-link"
+                            ></span>
                         </div>
 
-                        <div class="flex bullet-wrap">
-                            <div
-                                class="hex-wrap waypoint animated flip-in-x"
-                                data-animation="flip-in-x"
-                                data-delay=".2s"
-                                style="animation-delay: 0.2s"
-                            >
-                                <div class="hexagon">
-                                    <i class="mdi mdi-cellphone-link"></i>
-                                </div>
-                            </div>
-                            <div
-                                class="waypoint animated fade-in"
-                                data-animation="fade-in"
-                                data-delay=".2s"
-                                style="animation-delay: 0.2s"
-                            >
-                                <div class="label bold">Responsive</div>
-                                <div>
-                                    My layouts will work on any device, big or
-                                    small.
-                                </div>
-                            </div>
+                        <div class="label bold">Responsive</div>
+                        <div>
+                            My layouts will work on any device, big or small.
                         </div>
                     </div>
-                    <div class="flex row-gt-sm">
-                        <div class="flex bullet-wrap">
-                            <div
-                                class="hex-wrap waypoint animated flip-in-x"
-                                data-animation="flip-in-x"
-                                data-delay=".4s"
-                                style="animation-delay: 0.4s"
-                            >
-                                <div class="hexagon">
-                                    <i class="mdi mdi-lightbulb-outline"></i>
-                                </div>
-                            </div>
-                            <div
-                                class="waypoint animated fade-in"
-                                data-animation="fade-in"
-                                data-delay=".4s"
-                                style="animation-delay: 0.4s"
-                            >
-                                <div class="label bold">Intuitive</div>
-                                <div>
-                                    Strong preference for easy to use, intuitive
-                                    UX/UI.
-                                </div>
-                            </div>
+                    <div class="flex-column flex-start special-info">
+                        <div class="hexagon">
+                            <span
+                                class="iconify"
+                                data-icon="akar-icons:light-bulb"
+                            ></span>
                         </div>
 
-                        <div class="flex bullet-wrap">
-                            <div
-                                class="hex-wrap waypoint animated flip-in-x"
-                                data-animation="flip-in-x"
-                                data-delay=".6s"
-                                style="animation-delay: 0.6s"
-                            >
-                                <div class="hexagon">
-                                    <i class="mdi mdi-rocket"></i>
-                                </div>
-                            </div>
-                            <div
-                                class="waypoint animated fade-in"
-                                data-animation="fade-in"
-                                data-delay=".6s"
-                                style="animation-delay: 0.6s"
-                            >
-                                <div class="label bold">Dynamic</div>
-                                <div>
-                                    Websites don't have to be static, I love
-                                    making pages come to life.
-                                </div>
-                            </div>
+                        <div class="label bold">Intuitive</div>
+                        <div>
+                            Strong preference for easy to use, intuitive UX/UI.
+                        </div>
+                    </div>
+
+                    <div class="flex-column flex-start special-info">
+                        <div class="hexagon">
+                            <span
+                                class="iconify"
+                                data-icon="ion:rocket-outline"
+                            ></span>
+                        </div>
+
+                        <div class="label bold">Dynamic</div>
+                        <div>
+                            Websites don't have to be static, I love making
+                            pages come to life.
                         </div>
                     </div>
                 </div>
 
-                <div class="skills-wrapper flex row-gt-sm">
+                <div class="skills-wrapper flex">
                     <div
-                        class="flex flex-50-gt-sm waypoint animated slide-in-left"
+                        class="flex-column flex-50-gt-sm waypoint animated slide-in-left"
                         data-animation="slide-in-left"
                     >
+                        <img
+                            id="avatar"
+                            src="https://res.cloudinary.com/web-upload/image/upload/v1646572483/avatar_hazo0w.jpg"
+                            alt="My avatar"
+                        />
+
                         <div class="label bold">Who's this guy?</div>
                         <div>
-                            I'm a Front-End Developer for
+                            I am a 3rd year student at
                             <a
                                 class="highlight"
-                                href="http://www.chownow.com"
+                                href="http://www.ctu.edu.vn"
                                 target="_blank"
-                                >ChowNow</a
+                                >Can Tho University</a
                             >
-                            in Los Angeles, CA.
+                            in Can Tho, Vietnam.
                             <br />
-                            I have serious passion for UI effects, animations
-                            and creating intuitive, dynamic user experiences.
+                            I have serious passion for frontend, backend and how
+                            to create a website with full function.
                             <br />
-                            <span class="page-link highlight" dest="contact"
-                                >Let's make something special.</span
-                            >
+                            <a class="highlight" href="#contact">
+                                Let's make something special.
+                            </a>
                         </div>
                     </div>
 
-                    <div
-                        class="flex flex-50-gt-sm waypoint bars-wrap animated slide-in-right"
-                        data-animation="slide-in-right"
-                    >
+                    <div class="flex-column bar-field">
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 90%">
-                                <div class="tag bold flex">CSS</div>
+                            <div class="flex fill html-study">
+                                <div class="tag bold">HTML</div>
                             </div>
                             <span>90%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 90%">
-                                <div class="tag bold flex">HTML</div>
+                            <div class="flex fill css-study" style="width: 90%">
+                                <div class="tag">CSS</div>
                             </div>
                             <span>90%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 80%">
-                                <div class="tag bold flex">React</div>
+                            <div
+                                class="flex fill react-study"
+                                style="width: 80%"
+                            >
+                                <div class="tag bold">React</div>
                             </div>
                             <span>80%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 80%">
-                                <div class="tag bold flex">JavaScript</div>
+                            <div
+                                class="flex fill javascript-study"
+                                style="width: 80%"
+                            >
+                                <div class="tag">JavaScript</div>
                             </div>
                             <span>80%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 50%">
-                                <div class="tag bold flex">Angular</div>
+                            <div
+                                class="flex fill mongodb-study"
+                                style="width: 50%"
+                            >
+                                <div class="tag bold">Mongodb</div>
                             </div>
                             <span>50%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 65%">
-                                <div class="tag bold flex">Node.js</div>
+                            <div
+                                class="flex fill nodejs-study"
+                                style="width: 65%"
+                            >
+                                <div class="tag bold">Node.js</div>
                             </div>
                             <span>65%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 65%">
-                                <div class="tag bold flex">Ruby/Rails</div>
+                            <div class="flex fill php-study" style="width: 65%">
+                                <div class="tag bold">PHP</div>
                             </div>
                             <span>65%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 50%">
-                                <div class="tag bold flex">UI Design</div>
+                            <div class="flex fill ui-study" style="width: 50%">
+                                <div class="tag bold">UI Design</div>
                             </div>
                             <span>50%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 60%">
-                                <div class="tag bold flex">Photoshop</div>
+                            <div
+                                class="flex fill figma-study"
+                                style="width: 60%"
+                            >
+                                <div class="tag bold">Figma</div>
                             </div>
                             <span>60%</span>
                         </div>
 
                         <div class="bar flex">
-                            <div class="bar fill" style="width: 50%">
-                                <div class="tag bold flex">Sketch</div>
+                            <div
+                                class="flex fill tailwind-study"
+                                style="width: 50%"
+                            >
+                                <div class="tag bold">TailwindCSS</div>
                             </div>
                             <span>50%</span>
                         </div>
@@ -409,7 +388,7 @@
 
         <footer>
             <p>
-                <a href="https://www.freecodecamp.com/" target="_blank"
+                <a href="https://www.trieuvy.cf/" target="_blank"
                     >Vy VT <i class="fab fa-free-code-camp"></i
                 ></a>
             </p>
@@ -417,16 +396,8 @@
 
         <!-- END FOOTER SECTION -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 
         <script src="./assets/javascript/index.js"></script>
-
-        <script id="rendered-js">
-            // coded by @lasjorg
-            // eslint-disable-next-line no-unused-vars
-            const projectName = "portfolio";
-            //# sourceURL=pen.js
-        </script>
     </body>
 </html>
