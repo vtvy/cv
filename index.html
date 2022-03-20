@@ -32,7 +32,7 @@
 
     <body>
         <div id="main">
-            <section id="home" class="flex">
+            <section id="home" class="flex-column">
                 <h1>Hey I am <span class="highlight">Vo Trieu Vy</span></h1>
                 <h2>a full-stack web developer.</h2>
                 <button id="scroll-button">Go to my infomation</button>
@@ -117,10 +117,7 @@
                     </div>
 
                     <div class="skills-wrapper flex">
-                        <div
-                            class="flex-column flex-50-gt-sm waypoint animated slide-in-left"
-                            data-animation="slide-in-left"
-                        >
+                        <div class="flex-column slide-in-left infor">
                             <img
                                 id="avatar"
                                 src="https://res.cloudinary.com/web-upload/image/upload/v1646572483/avatar_hazo0w.jpg"
@@ -152,9 +149,11 @@
 
                             <div class="tag">CSS</div>
 
+                            <div class="tag">JavaScript</div>
+
                             <div class="tag">React</div>
 
-                            <div class="tag">JavaScript</div>
+                            <div class="tag">MySQL</div>
 
                             <div class="tag">Mongodb</div>
 
@@ -171,119 +170,41 @@
                     </div>
                 </div>
             </section>
-            <section id="portfolio" class="projects-section">
+            <section id="portfolio" class="flex-column">
                 <h2 class="section-title">Projects</h2>
                 <div class="title-dash"></div>
-                <div class="projects-grid">
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/zNqgVx"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            Tribute Page
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            Random Quote Machine
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/wgGVVX"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            JavaScript Calculator
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/mVEJag"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            Map Data Across the Globe
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/wGqEga"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            Wikipedia Viewer
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
-                    <a
-                        href="https://codepen.io/freeCodeCamp/full/KzXQgy"
-                        target="_blank"
-                        class="project project-tile"
-                    >
-                        <img
-                            class="project-image"
-                            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
-                            alt="project"
-                        />
-                        <p class="project-title">
-                            <span class="code">&lt;</span>
-                            Tic Tac Toe Game
-                            <span class="code">/&gt;</span>
-                        </p>
-                    </a>
+                <div class="flex">
+                    <div class="flex">
+                        <div class="filter tag active" data-filter="all">
+                            ALL
+                        </div>
+                        <div class="filter tag" data-filter=".rails">
+                            HTML/CSS/JS
+                        </div>
+                        <div class="filter tag" data-filter=".react">MERN</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gallery">
+                    <div class="gallery-card flex-column">
+                        <a
+                            href="/NhuCute"
+                            target="_blank"
+                            class="highlight-left"
+                            >View source code</a
+                        >
+                        <a
+                            href="/NhuCute"
+                            class="highlight-right"
+                            target="_blank"
+                            >Visit website</a
+                        >
+                    </div>
                 </div>
 
-                <a
-                    href="https://codepen.io/FreeCodeCamp/"
-                    class="btn btn-show-all"
-                    target="_blank"
+                <a href="/NhuCute" class="btn btn-show-all" target="_blank"
                     >Show all<i class="fas fa-chevron-right"></i
                 ></a>
             </section>
-
-            <!-- END PROJECTS SECTION -->
-
-            <!-- START CONTACT SECTION -->
 
             <section id="contact" class="contact-section">
                 <div class="contact-section-header">
@@ -312,9 +233,6 @@
                         class="btn contact-details"
                     >
                         <i class="fas fa-at"></i> Send a mail
-                    </a>
-                    <a href="tel:555-555-5555" class="btn contact-details">
-                        <i class="fas fa-mobile-alt"></i> Call me
                     </a>
                 </div>
             </section>

@@ -21,10 +21,6 @@ html {
     font-size: 62.5%;
 }
 
-#main {
-    background: linear-gradient(to right top, #58aec3, #ccdde4);
-}
-
 /* 1200px / 16px = 75rem */
 @media (max-width: 75rem) {
     /* html {
@@ -106,13 +102,18 @@ img {
     flex: 1;
 }
 
+.flex {
+    align-items: flex-start;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
 
 .flex-column {
     flex-direction: column;
-    margin: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .flex-start {
@@ -257,8 +258,17 @@ img {
     height: 100%;
 }
 
+.infor {
+    box-shadow: var(--main-shadow);
+    background: linear-gradient(to right top, #a0e0a860, #c9c4ac44);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
 #avatar {
     height: 10rem;
+    border-radius: 1rem;
     width: auto;
 }
 
@@ -272,49 +282,102 @@ img {
     background-color: #07aed888;
     box-shadow: var(--main-shadow);
     width: 13rem;
+    color: #f0f0f0;
     border-radius: 1rem;
     text-align: center;
     margin: 1rem;
     padding: 1rem;
 }
 
-.projects-section {
-    text-align: center;
-    padding: 10rrem 2rrem;
-    background: var(--main-blue);
-}
-
-.projects-section-header {
-    max-width: 640px;
-    margin: 0 auto 6rrem auto;
-    border-bottom: 0.2rrem solid var(--main-white);
-}
-
-@media (max-width: 28.75rem) {
-    .projects-section-header {
-        font-size: 4rrem;
-    }
-}
-
 /* "Automagic" image grid using no media queries */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rrem;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 6rrem;
+.gallery {
+    margin-top: 2rem;
 }
 
-@media (max-width: 30.625rem) {
-    .projects-section {
-        padding: 6rrem 1rrem;
-    }
+.gallery-card {
+    width: 40rem;
+    padding: 0;
+    height: 20rem;
+    border-radius: 2rem;
+    position: relative;
+    background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795903/Trieu%20Vy/cv/thumb-01_tg7xbk.png)
+        no-repeat center / cover;
+}
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+.gallery-card::before {
+    content: "";
+    position: absolute;
+    background-color: #e3e5e744;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    top: 0;
+    left: 0;
+    right: 40rem;
+    bottom: 10rem;
+}
+
+.gallery-card::after {
+    content: "";
+    position: absolute;
+    background-color: #e3e5e744;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    top: 10rem;
+    right: 0;
+    left: 40rem;
+    bottom: 0;
+}
+
+.gallery-card .highlight-left,
+.gallery-card .highlight-right {
+    z-index: 1;
+    bottom: 1rem;
+    position: absolute;
+    color: #000;
+    background-color: #f5f5f5a5;
+    border: 0.125rem solid #e31b6d;
+    margin: 0 auto;
+    width: 18rem;
+    text-align: center;
+    border-radius: 2rem;
+    display: none;
+}
+
+.gallery-card .highlight-left {
+    left: 1rem;
+}
+.gallery-card .highlight-right {
+    right: 1rem;
+}
+
+.gallery-card .highlight-left:hover,
+.gallery-card .highlight-right:hover {
+    background: #e31b6d;
+    color: #fff;
+}
+
+.gallery-card:hover::before {
+    animation: slide-left-project linear 0.4s forwards;
+}
+.gallery-card:hover::after {
+    animation: slide-right-project linear 0.4s forwards;
+}
+
+@keyframes slide-left-project {
+    to {
+        right: 0;
     }
+}
+
+@keyframes slide-right-project {
+    to {
+        left: 0;
+    }
+}
+
+.gallery-card:hover .highlight-left,
+.gallery-card:hover .highlight-right {
+    display: block;
 }
 
 .project {
@@ -379,7 +442,7 @@ img {
     text-align: center;
     width: 100%;
     height: 80vh;
-    padding: 0 2rrem;
+    padding: 0 2rem;
     background: var(--main-gray);
 }
 
