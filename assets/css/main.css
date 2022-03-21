@@ -368,8 +368,8 @@ img {
     content: "";
     position: absolute;
     background-color: #e3e5e744;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     top: 0;
     left: 0;
     right: 40rem;
@@ -380,8 +380,8 @@ img {
     content: "";
     position: absolute;
     background-color: #e3e5e744;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     top: 10rem;
     right: 0;
     left: 40rem;
