@@ -44,3 +44,16 @@ function highlightLink(anchor) {
 $("#scroll-button").on("click", function () {
     location.href = "#about";
 });
+
+$(".filter").on("click", function () {
+    $(".gallery-card.active").removeClass("active");
+
+    $(`.gallery-card[framework=${this.attributes.filter.value}]`).addClass(
+        "active"
+    );
+    $(".dash-line").css("left", this.offsetLeft + "px");
+    $(".dash-line").css("width", this.offsetWidth + "px");
+    if (this.attributes.filter.value === "all") {
+        $(".gallery-card[framework]").addClass("active");
+    }
+});

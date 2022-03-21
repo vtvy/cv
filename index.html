@@ -19,13 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Varela+Round&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+
         <link rel="stylesheet" href="./assets/css/main.css" />
         <title>Trieu Vy CV</title>
     </head>
@@ -173,66 +167,204 @@
             <section id="portfolio" class="flex-column">
                 <h2 class="section-title">Projects</h2>
                 <div class="title-dash"></div>
-                <div class="flex">
-                    <div class="flex">
-                        <div class="filter tag active" data-filter="all">
-                            ALL
-                        </div>
-                        <div class="filter tag" data-filter=".rails">
-                            HTML/CSS/JS
-                        </div>
-                        <div class="filter tag" data-filter=".react">MERN</div>
+                <div class="flex tabs">
+                    <div class="filter active flex" filter="all">
+                        <span class="iconify" data-icon="ep:select"></span>
+                        ALL
                     </div>
+                    <div class="filter flex" filter="html">
+                        <span class="iconify" data-icon="bx:code-alt"></span>
+                        HTML/CSS/JS
+                    </div>
+                    <div class="filter flex" filter="mern">
+                        <span class="iconify" data-icon="la:react"></span>
+                        MERN
+                    </div>
+                    <div class="dash-line"></div>
                 </div>
                 <div class="flex flex-wrap gallery">
-                    <div class="gallery-card flex-column">
+                    <div
+                        id="nhu-cute"
+                        class="gallery-card active flex-column"
+                        framework="html"
+                    >
                         <a
-                            href="/NhuCute"
+                            href="https://github.com/votrieuvy1661/NhuCute"
                             target="_blank"
                             class="highlight-left"
-                            >View source code</a
                         >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span
+                        ></a>
                         <a
                             href="/NhuCute"
                             class="highlight-right"
                             target="_blank"
-                            >Visit website</a
                         >
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
+                    </div>
+                    <div
+                        id="blog"
+                        class="gallery-card active flex-column"
+                        framework="mern"
+                    >
+                        <a
+                            href="https://github.com/votrieuvy1661/votrieuvy1661.github.io"
+                            target="_blank"
+                            class="highlight-left"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span>
+                        </a>
+                        <a href="/" class="highlight-right" target="_blank">
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
+                    </div>
+                    <div
+                        id="stephen-chow"
+                        class="gallery-card active flex-column"
+                        framework="mern"
+                    >
+                        <a
+                            href="https://github.com/votrieuvy1661/stephen-chow"
+                            target="_blank"
+                            class="highlight-left"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span>
+                        </a>
+                        <a
+                            href="/stephen-chow"
+                            class="highlight-right"
+                            target="_blank"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
+                    </div>
+                    <div
+                        id="survey-form"
+                        class="gallery-card active flex-column"
+                        framework="mern"
+                    >
+                        <a
+                            href="https://github.com/votrieuvy1661/survey-form"
+                            target="_blank"
+                            class="highlight-left"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span>
+                        </a>
+                        <a
+                            href="/survey-form"
+                            class="highlight-right"
+                            target="_blank"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
+                    </div>
+                    <div
+                        id="product-landing"
+                        class="gallery-card active flex-column"
+                        framework="mern"
+                    >
+                        <a
+                            href="https://github.com/votrieuvy1661/product-landing"
+                            target="_blank"
+                            class="highlight-left"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span>
+                        </a>
+                        <a
+                            href="/product-landing"
+                            class="highlight-right"
+                            target="_blank"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
+                    </div>
+                    <div
+                        id="link"
+                        class="gallery-card active flex-column"
+                        framework="mern"
+                    >
+                        <a
+                            href="https://github.com/votrieuvy1661/link"
+                            target="_blank"
+                            class="highlight-left"
+                        >
+                            <span
+                                class="iconify"
+                                data-icon="codicon:github"
+                            ></span>
+                        </a>
+                        <a href="/link" class="highlight-right" target="_blank">
+                            <span
+                                class="iconify"
+                                data-icon="mdi:search-web"
+                            ></span>
+                        </a>
                     </div>
                 </div>
-
-                <a href="/NhuCute" class="btn btn-show-all" target="_blank"
-                    >Show all<i class="fas fa-chevron-right"></i
-                ></a>
             </section>
 
-            <section id="contact" class="contact-section">
-                <div class="contact-section-header">
-                    <h2>Let's work together...</h2>
-                    <p>How do you take your coffee?</p>
-                </div>
+            <section id="contact" class="flex-column">
+                <h2 class="section-title">Contact</h2>
+                <div class="title-dash"></div>
                 <div class="contact-links">
                     <a
                         href="https://www.facebook.com/vy.ct.96/"
                         target="_blank"
-                        class="btn contact-details"
+                        class="contact-details"
                     >
-                        <i class="fab fa-facebook-square"> </i> Facebook
+                        <span class="iconify" data-icon="bi:facebook"></span>
+                        Facebook
                     </a>
                     <a
                         id="profile-link"
                         href="https://github.com/votrieuvy1661"
                         target="_blank"
-                        class="btn contact-details"
+                        class="contact-details"
                     >
-                        <i class="fab fa-github"></i> GitHub
+                        <span
+                            class="iconify"
+                            data-icon="akar-icons:github-fill"
+                        ></span>
+                        GitHub
                     </a>
 
                     <a
                         href="mailto:votrieuvy1661@gmail.com"
-                        class="btn contact-details"
+                        class="contact-details"
                     >
-                        <i class="fas fa-at"></i> Send a mail
+                        <span class="iconify" data-icon="entypo:email"></span>
+                        Send a mail
                     </a>
                 </div>
             </section>

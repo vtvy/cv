@@ -18,7 +18,6 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: 62.5%;
 }
 
 /* 1200px / 16px = 75rem */
@@ -46,15 +45,19 @@ html {
 
 body {
     font-family: "Varela Round", sans-serif;
-    font-size: 1.8rem; /* 18px */
+    font-size: 1.125rem; /* 18px */
     font-weight: 400;
-    line-height: 1.4;
+    /* line-height: 1.4; */
+}
+
+#main {
+    background: linear-gradient(to right top, #a2d2fabd, #ccdde4af);
 }
 
 h1,
 h2 {
     font-family: "Varela Round", sans-serif;
-    font-weight: 700;
+    font-weight: 700rem;
     text-align: center;
     color: #f0f0f0;
 }
@@ -62,7 +65,7 @@ h2 {
 section {
     color: #444649;
     padding: 6.25rem 0;
-    background: linear-gradient(to right top, #a2d2fabd, #ccdde4af);
+    min-height: 100vh;
 }
 
 /* 600px = 37.5rem */
@@ -73,11 +76,11 @@ section {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
 }
 
 ul {
@@ -169,16 +172,12 @@ img {
     #navbar {
         justify-content: center;
     }
-
-    .nav-list {
-        margin: 0 1rrem;
-    }
 }
 
 .nav-list a {
     display: block;
-    font-size: 2.2rem;
-    padding: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .nav-list a:hover {
@@ -222,10 +221,9 @@ img {
 .hexagon {
     background-color: #0dbcc296;
     display: inline-block;
-    height: 16rem;
-    width: calc(16rem * 0.57735);
+    height: 8rem;
+    width: calc(8rem * 0.57735);
     position: relative;
-    color: #c9c9c9;
     box-shadow: var(--main-shadow);
 }
 
@@ -256,6 +254,7 @@ img {
     width: 100%;
     z-index: 1;
     height: 100%;
+    color: #f0f0f0;
 }
 
 .infor {
@@ -281,7 +280,7 @@ img {
 .tag {
     background-color: #07aed888;
     box-shadow: var(--main-shadow);
-    width: 13rem;
+    width: 7rem;
     color: #f0f0f0;
     border-radius: 1rem;
     text-align: center;
@@ -289,19 +288,80 @@ img {
     padding: 1rem;
 }
 
-/* "Automagic" image grid using no media queries */
+#portfolio {
+    background-color: #f1f1f1;
+}
+
+#portfolio .iconify {
+    height: 1.375rem;
+    width: 1.375rem;
+}
+
+.tabs {
+    position: relative;
+    max-height: 5.5rem;
+}
+
+.filter {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.filter:hover {
+    background-color: #bfd1bcc0;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.dash-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 7.5rem;
+    height: 0.375rem;
+    border-radius: 2rem;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}
 .gallery {
     margin-top: 2rem;
 }
 
-.gallery-card {
-    width: 40rem;
-    padding: 0;
-    height: 20rem;
-    border-radius: 2rem;
-    position: relative;
+#nhu-cute {
     background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795903/Trieu%20Vy/cv/thumb-01_tg7xbk.png)
         no-repeat center / cover;
+}
+
+#stephen-chow {
+    background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795902/Trieu%20Vy/cv/thumb-04_bbbmlg.png)
+        no-repeat center / cover;
+}
+
+#survey-form {
+    background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795902/Trieu%20Vy/cv/Screenshot_23_zhek8h.png)
+        no-repeat center / cover;
+}
+
+#product-landing {
+    background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795902/Trieu%20Vy/cv/thumb-03_cam0o9.png)
+        no-repeat center / cover;
+}
+
+#link {
+    background: url(https://res.cloudinary.com/web-upload/image/upload/v1647795901/Trieu%20Vy/cv/thumb-05_ntasrx.png)
+        no-repeat center / cover;
+}
+
+.gallery-card {
+    min-width: 20rem;
+    max-width: 20rem;
+    padding: 0;
+    height: 20rem;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: var(--main-shadow);
+    margin: 1rem;
+    display: none;
 }
 
 .gallery-card::before {
@@ -337,7 +397,7 @@ img {
     background-color: #f5f5f5a5;
     border: 0.125rem solid #e31b6d;
     margin: 0 auto;
-    width: 18rem;
+    width: auto;
     text-align: center;
     border-radius: 2rem;
     display: none;
@@ -380,6 +440,20 @@ img {
     display: block;
 }
 
+.gallery-card.active {
+    display: block;
+}
+
+#contact {
+    justify-content: flex-start;
+}
+
+#contact .contact-details {
+    color: #000;
+    display: flex;
+    font-size: 2rem;
+    margin: 5rem 0;
+}
 /* Footer */
 
 footer {
@@ -389,19 +463,4 @@ footer {
     padding: 2rrem;
     background: var(--main-gray);
     border-top: 4px solid var(--main-red);
-}
-
-footer > p {
-    margin: 2rrem;
-}
-
-footer i {
-    vertical-align: middle;
-}
-
-@media (max-width: 28.75rem) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
 }
